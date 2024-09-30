@@ -9,13 +9,16 @@
       
 
         {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'add_record' %}">Add Record</a>
+        </li>
          <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">Logout</a>
         </li>
 
         {% else %}
          <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Register</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'register' %}">Register</a>
         </li>
         <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Login</a>
